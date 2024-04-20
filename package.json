@@ -1,0 +1,19 @@
+{
+  "name": "nodecourse-max",
+  "version": "1.0.0",
+  "description": "node course",
+  "main": "firstApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node firstApp.js",
+    "dev": "nodemon firstApp.js"
+  },
+  "author": "sandesh",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
