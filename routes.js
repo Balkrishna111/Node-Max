@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const utils = (req, res) => {
-  console.log(req.url, req.headers);
+  // console.log(req.url, req.headers);
 
   const url = req.url;
   if (url === "/") {
