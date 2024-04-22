@@ -1,23 +1,12 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title #{title}
-    body 
-        nav 
-            ul 
-                li 
-                    a(href="/") Home 
-                li 
-                    a(href="/admin/add-product") Add Product
-        div 
+extends layouts/main-layout.pug
 
-            if prods.length > 0
-                h1 Here are your products. 
-                each products in prods 
-                    h2 #{products.title}   
-                    img(src="https://timvandevall.com/wp-content/uploads/2014/01/Closed-Book-Clip-Art-Black-and-White.jpg", alt="book", height="200px", width="200px")             
-                    p $200
-            else 
-                h1 No products found.
+block content
+    div 
+        if prods.length > 0
+            h1 Here are your products. 
+            each products in prods 
+                h2 #{products.title}   
+                img(src="https://timvandevall.com/wp-content/uploads/2014/01/Closed-Book-Clip-Art-Black-and-White.jpg", alt="book", height="200px", width="200px")             
+                p $200
+        else 
+            h1 No products found.
