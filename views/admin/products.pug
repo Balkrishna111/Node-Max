@@ -1,3 +1,15 @@
 extends ../layouts/main-layout.pug
 
 block content
+    div 
+        if prods.length > 0
+            h1 Here are your products. 
+            each products in prods 
+                h2 #{products.title}   
+                img(src="https://silentbook.club/cdn/shop/files/SilentBookClub_BekkaPalmer6_1600_1200x750.jpg?v=1613696346", alt='image' , height="200px", width="200px")             
+                p $#{products.price}
+                p #{products.description}
+                button Edit
+                button Delete
+        else 
+            h1 No products found.

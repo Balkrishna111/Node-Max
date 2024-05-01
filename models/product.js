@@ -2,11 +2,11 @@ const path = require("path");
 const fs = require("fs");
 
 module.exports = class Product {
-  constructor(t, imageUrl, description, price) {
+  constructor(t, imageUrl, price, description) {
     this.title = t;
     this.imageUrl = imageUrl;
-    this.description = description;
     this.price = price;
+    this.description = description;
   }
   save() {
     const p = path.join(
@@ -18,11 +18,12 @@ module.exports = class Product {
       let products = [];
       if (!err) {
         products = JSON.parse(fileContent);
+      } else {
+        fs.writeFile(p, JSON.stringify(products), (err) => {
+          console.log(err);
+        });
+        products.push(this);
       }
-      products.push(this);
-      fs.writeFile(p, JSON.stringify(products), (err) => {
-        console.log(err);
-      });
     });
   }
 

@@ -6,7 +6,9 @@ block content
             h1 Here are your products. 
             each products in prods 
                 h2 #{products.title}   
-                img(src="https://timvandevall.com/wp-content/uploads/2014/01/Closed-Book-Clip-Art-Black-and-White.jpg", alt="book", height="200px", width="200px")             
-                p $200
+                img(src="https://silentbook.club/cdn/shop/files/SilentBookClub_BekkaPalmer6_1600_1200x750.jpg?v=1613696346", alt='image' , height="200px", width="200px")             
+                p $#{products.price}
+                p #{products.description}
+                button Add to Cart
         else 
             h1 No products found.
