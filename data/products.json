@@ -1,1 +1,8 @@
-[{ "title": "new product", "price": 19, "description": "a new book" }]
+[
+  {
+    "id": "1234",
+    "title": "new product",
+    "price": 19,
+    "description": "a new book"
+  }
+]
