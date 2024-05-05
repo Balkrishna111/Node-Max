@@ -13,5 +13,6 @@ block content
                     button(type="button") Details
                 form(action="/add-to-cart" method="POST") 
                     button Add to Cart
+                    input(type="hidden", name="productId" value=`${products.id}`)
         else 
             h1 No products found.
