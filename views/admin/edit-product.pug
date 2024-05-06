@@ -1,3 +1,14 @@
 extends ../layouts/main-layout.pug
 
 block content
+        main
+        form(action="/admin/add-product" method="POST")
+            label(for="Title") Title: 
+                input(type="text" name="title")
+            label(for="imageUrl") Image:
+                input(type="text" name="ImageUrl")
+            label(for="price") Price:
+                input(type="number" name="price")
+            label(for="description") Description:
+                input(type="text" rows="5" name="description")
+            button(type="submit") Add Product
