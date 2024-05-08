@@ -9,7 +9,7 @@ block content
                 img(src="https://silentbook.club/cdn/shop/files/SilentBookClub_BekkaPalmer6_1600_1200x750.jpg?v=1613696346", alt='image' , height="200px", width="200px")             
                 p $#{products.price}
                 p #{products.description}
-                a(href="admin/edit-product") 
+                a(href="/edit-product") 
                     button Edit
                 form(action="/admin/delete-product" method="POST")  
                     button Delete
