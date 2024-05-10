@@ -6,12 +6,15 @@ block content
             h1 Here are your products. 
             each products in prods 
                 h2 #{products.title}   
-                img(src="https://silentbook.club/cdn/shop/files/SilentBookClub_BekkaPalmer6_1600_1200x750.jpg?v=1613696346", alt='image' , height="200px", width="200px")             
+                img(src=`https://silentbook.club/cdn/shop/files/SilentBookClub_BekkaPalmer6_1600_1200x750.jpg?v=1613696346`, alt='image' , height="200px", width="200px")             
                 p $#{products.price}
                 p #{products.description}
-                a(href="/edit-product") 
+                a(href=`/admin/edit-product/${products.id}?edit=true`) 
                     button Edit
                 form(action="/admin/delete-product" method="POST")  
+                    input(type="hidden" value=`${products.id}` name="productId")
                     button Delete
         else 
             h1 No products found.
+
+//- https://silentbook.club/cdn/shop/files/SilentBookClub_BekkaPalmer6_1600_1200x750.jpg?v=1613696346
